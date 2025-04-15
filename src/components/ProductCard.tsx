@@ -29,9 +29,8 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col">
-      <Link href={`/products/${product.id}`} legacyBehavior>
-        <a className="block group flex-grow">
+    <div className="border border-gray-100  rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white flex flex-col">
+      <Link href={`/products/${product.id}`} className="block group flex-grow ">
           <div className="relative overflow-hidden">
              <img 
                 src={product.imageUrl} 
@@ -45,7 +44,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             {/* <p className="text-gray-600 text-sm mb-2 h-10 overflow-hidden text-ellipsis" title={product.description}>{product.description}</p> */}
             <p className="text-xl font-bold text-indigo-600 mt-2">${product.price.toFixed(2)}</p>
           </div>
-        </a>
       </Link>
       <div className="p-4 pt-0 mt-auto"> {/* Add padding top 0 to separate button */}
         <button 
